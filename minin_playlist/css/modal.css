@@ -1,0 +1,82 @@
+.vmodal {}                                 /*у нас есть корневой элемент .vmodal. это будет пустой селектор*/
+
+.vmodal.open .modal-overlay,                               /*когда .vmodal, и у него есть класс open, то тогда дочернему элементу .modal-overlay... */
+.vmodal.open .modal-window {                               /* ...и .modal-window, мы будем задавать общий стиль... */  /*если open наше окно видно*/
+    opacity: 1;
+    z-index: 1000;                                       /* задать фиксированое значение z-index, которое позволит модальному окну появлятся поверх всех элементов */
+}
+
+.vmodal.hide .modal-overlay,                               /*когда .vmodal, и у него есть класс hide, то тогда дочернему элементу .modal-overlay... */
+.vmodal.hide .modal-window {                               /* ...и .modal-window, мы будем задавать общий стиль... */ 
+    opacity: 1;
+    z-index: 1000;                                       /* задать фиксированое значение z-index, которое позволит модальному окну появлятся поверх всех элементов */
+}
+
+.vmodal.open .modal-window {                  /*когда у.vmodal есть класс open, тогда силектору .modal-window мы задаем... */
+transform: translateY(100px)                           /*...мы задаем transform: translateY(100px) */
+}
+
+.vmodal.open .modal-overlay {                  /*когда у.vmodal есть класс open, тогда силектору .modal-overlay мы задаем... */
+background: rgba(0, 0, 0, .5)                           /*...мы задаем background: rgba(0, 0, 0, .5) */
+}
+
+.vmodal.hide .modal-window {                  /*когда у.vmodal есть класс hide, тогда силектору .modal-window мы задаем... */
+transform: translateY(-200px)                           /*...мы задаем transform: translateY(-200px) */
+}
+
+.vmodal.hide .modal-overlay {                  /*когда у.vmodal есть класс hide, тогда силектору .modal-overlay мы задаем... */
+background: rgba(0, 0, 0, 0)                           /*...мы задаем background: rgba(0, 0, 0, 0) */
+}
+
+.modal-window, .modal-overlay {             /*чтобы модальное окно появлялось когда мы вызываем соответствующий метод open(), и закрывалась close().*/  
+    opacity: 0;                             /*это по умолчанию их стили, таким образом мы их скрыли*/
+    z-index: -1;
+}
+
+.modal-overlay {                         /*называется селекторы*/
+    position: fixed;                     /* стиль position, даный элемент(затемнение) будет по всей величине экрана */
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);        /* темного цвета с прозрачностью 50% / убрали затемнение с .5 на 0*/
+    transition: background .2s ease-in;
+}
+
+.modal-window {                        /*корневой элемент для модального окна*/
+    width: 600px;                      /*ширина окна. по умолчанию зададим 600пикселей*/
+    border-radius: 10px;                /*скругление углов окна*/
+    background: #fff;                /*цвет модального окна*/
+    margin: 0 auto;                    /*auto-переносим окошко в центр и на 100px ниже*/
+    transform: translateY(-200px);      /*хотим чтобы модальное окно находилось вне экрана. translateY(-200px) позволяет перемещать элемент по вертикали, по умолчанию -200px...*/
+    transition: transform .2s ease-in;  /*...чтобы сделать этот элемент плавным добавляем */
+}
+
+.modal-header {
+    padding: 5px 10px;                  /*внутрений отступ 5px по высоте и 10px по ширене*/
+    display: flex;                      /*для того чтобы расположить элементы по левому и правому краям*/
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;    
+}
+
+.modal-title {
+    font-size: 1.3rem;                    /*размер шрифта*/
+}
+
+.modal-close {
+    cursor: pointer;                      /*при наведении на крестик, курсор меняется*/
+}
+
+.modal-body {
+    padding: 10px;
+}
+
+.modal-body p {
+    margin: 0 0 5px;
+}
+
+
+.modal-footer {                           /*в footer будут лежать кнопки, которые будут позворять взаимодействовать с контентом модалки*/
+    padding: 5px 10px;
+    border-top: 1px solid #eee;
+}
