@@ -1,0 +1,16 @@
+version: '3.7'
+
+
+
+
+services:
+  client:
+
+    image: sever51/eng_client
+    ports: 
+      - 4000:4000
+  server:
+
+    image: sever51/eng_server
+    ports: 
+      - 6000:6000

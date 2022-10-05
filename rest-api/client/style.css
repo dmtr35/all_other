@@ -1,0 +1,52 @@
+input:invalid {
+    border: 2px dashed red;
+}
+
+
+input:valid {
+    border: 2px solid black;
+}
+
+
+
+.bd {
+    /* overflow: hidden; */
+    /* position: static; */
+    /* position: relative; */
+
+    width: 100%;
+    background: #496fad;
+}
+
+
+
+
+.conteiner {
+    height: 100%;
+    width: 100%;
+    /* background: #496fad; */
+    padding: 50px;
+}
+
+.card {
+    background: #496fad;
+}
+
+
+.btn-primary {
+    margin: 10px;
+    background: #0000FF;
+}
+
+
+
+.card-title {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+.card-text {
+    font-size: 25px;
+    font-weight: normal;
+}

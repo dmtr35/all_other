@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modalStyle.css">
+
+  <title>REST API</title>
+</head>
+
+<body class="bd">
+
+
+
+
+
+  <div class="conteiner pt-3"></div>
+  <h1>TO DO List</h1>
+
+
+  <form class="form-inline mb-3">
+    <table>
+      <tr>
+        <td>
+          <div class="form-group mr-5">
+
+            <label for="name" class="mr-3">Имя</label>
+            <input type="text" class="inp1 form-control-1" id="name">
+          </div>
+
+          <div class="form-group mr-5">
+            <label for="value" class="mr-3">Значение</label>
+            <input type="text" class="inp2 form-control-2" id="value">
+          </div>
+
+
+        </td>
+        <td>
+          <button class="btn btn-primary" type="submit">Создать</button>
+          <button class="btn btn-out" type="submit">Выход</button>
+
+        </td>
+      </tr>
+
+    </table>
+
+
+
+  </form>
+
+
+
+
+  <div class="card mb-3" id="one">
+    <div class="block-row">
+    </div>
+  </div>
+
+
+
+  <div class="popup__bg">
+    <form class="popup">
+      <img src="https://freesvg.org/img/close-button.png" class="close-popup">
+
+      <!-- <a href="" class="close-popup">X</a> -->
+      <label>
+        <input type="text" class="form-update-1" name="name">
+        <div class="label__text_name">
+          Ваше имя
+        </div>
+      </label>
+
+      <label>
+        <input type="tel" class="form-update-2" name="tel">
+        <div class="label__text_value">
+          Значение
+        </div>
+      </label>
+
+
+      <button class="btn btnUpdete">Изменить</button>
+    </form>
+  </div>
+  <div class="wrapper">
+  </div>
+
+
+
+
+
+  <script type="module" src="frontend.js"></script>
+</body>
+
+</html>
